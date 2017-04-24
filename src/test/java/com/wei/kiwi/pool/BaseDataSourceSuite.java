@@ -9,7 +9,7 @@ import org.junit.Before;
 public class BaseDataSourceSuite {
 
     protected PoolProperties poolProperties = new PoolProperties();
-    protected final WeiDataSource weiDataSource = new WeiDataSource();
+    protected final KiwiDataSource weiDataSource = new KiwiDataSource();
 
     @Before
     public void begin(){

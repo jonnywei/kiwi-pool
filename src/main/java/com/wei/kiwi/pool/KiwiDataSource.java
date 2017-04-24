@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  * 连接池管理
  * Created by wjj on 4/6/17.
  */
-public class WeiDataSource implements DataSource {
+public class KiwiDataSource implements DataSource {
 
 
     private PoolProperties poolProperties;

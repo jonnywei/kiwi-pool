@@ -130,6 +130,8 @@ public class ConnectionPool {
                 //增加大小
                 size.incrementAndGet();
                 pooledConnection = createInnerPooledConnection();
+                logger.debug("busy add " + pooledConnection);
+                busy.add(pooledConnection);
                 return pooledConnection;
             }
             if(maxWait == 0){
@@ -151,6 +153,8 @@ public class ConnectionPool {
                 }
                 continue;
             }
+            busy.offer(pooledConnection);
+            logger.debug("busy add " + pooledConnection);
             return pooledConnection;
         }
     }

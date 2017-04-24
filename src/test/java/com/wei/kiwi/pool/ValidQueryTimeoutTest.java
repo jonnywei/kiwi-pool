@@ -41,9 +41,9 @@ public class ValidQueryTimeoutTest extends BaseDataSourceSuite{
     @Test
     public void testValidateQuery(  ) throws InterruptedException, SQLException {
 
-        ExecutorService es = Executors.newFixedThreadPool(30);
+        ExecutorService es = Executors.newFixedThreadPool(100);
 
-        for(int i=0; i< 40; i++){
+        for(int i=0; i< 100; i++){
             es.submit(new Runnable() {
                 @Override
                 public void run() {
